@@ -1,0 +1,2 @@
+https://biolab.put.poznan.pl/putemg-dataset/
+https://archive.ics.uci.edu/ml/datasets/sEMG+for+Basic+Hand+movements

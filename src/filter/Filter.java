@@ -6,17 +6,25 @@
 
 package filter;
 
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
 /**
  *
- * @author Оксана
+ * @author Erlkonig
  */
 public class Filter {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) throws FileNotFoundException {
+        ArrayList<Gesture> Gestures=new ArrayList<>();
+        Gesture curGest;
+        
+        for(int g=0;g<Parameters.getAmGest();g++){
+            curGest=new Gesture(Input.getGestureName(g),Input.getMatrix(g));
+            System.out.println(curGest.getName());
+            Gestures.add(curGest);
+        }
+        
     }
     
 }
