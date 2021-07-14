@@ -21,9 +21,10 @@ public class Filter {
         
         for(int g=0;g<Parameters.getAmGest();g++){
             curGest=new Gesture(Input.getGestureName(g),Input.getMatrix(g));
-            System.out.println(curGest.getName());
             Gestures.add(curGest);
         }
+        
+        Kalman.execute();
         
     }
     
