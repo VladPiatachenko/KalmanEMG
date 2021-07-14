@@ -24,8 +24,11 @@ public class Filter {
             Gestures.add(curGest);
         }
         
-        Kalman.execute();
-        
+        for(Gesture Current:Gestures){
+            double[][] cur=Current.getMatrix();
+                for(int i=0;i<Parameters.getReGest();i++){
+                    Kalman.execute(cur[i]);}
+                }
     }
     
 }
